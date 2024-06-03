@@ -30,18 +30,108 @@ namespace IT3B_Kostky
             Dice dice5 = new Dice();
             Dice dice6 = new Dice();
 
-            lab1.Content = dice1.Hodit.ToString();
-            lab2.Content = dice2.Hodit.ToString();
-            lab3.Content = dice3.Hodit.ToString();
-            lab4.Content = dice4.Hodit.ToString();
-            lab5.Content = dice5.Hodit.ToString();
-            lab6.Content = dice6.Hodit.ToString();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 1; i <= 3; i++)
             { 
-                Dice dice = new Dice();
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
 
-                
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can1.Children.Add(r);
+                }
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
+
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can2.Children.Add(r);
+                }
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
+
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can3.Children.Add(r);
+                }
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
+
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can4.Children.Add(r);
+                }
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
+
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can5.Children.Add(r);
+                }
+            }
+            for (int i = 1; i <= 3; i++)
+            {
+                for (int j = 1; j <= 3; j++)
+                {
+                    Rectangle r = new Rectangle();
+
+                    r.Width = can1.ActualWidth / 9;
+                    r.Height = can1.ActualHeight / 9;
+                    r.Fill = Brushes.Aqua;
+                    r.Stroke = Brushes.Black;
+                    r.StrokeThickness = 1;
+
+                    Canvas.SetLeft(r, r.Width * j);
+                    Canvas.SetTop(r, r.Height * i);
+                    can6.Children.Add(r);
+                }
             }
         }
     }
