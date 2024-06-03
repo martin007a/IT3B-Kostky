@@ -20,5 +20,22 @@ namespace IT3B_Kostky
   {
    InitializeComponent();
   }
- }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Dice dice1 = new Dice();
+            Dice dice2 = new Dice();
+            Dice dice3 = new Dice();
+            Dice dice4 = new Dice();
+            Dice dice5 = new Dice();
+            Dice dice6 = new Dice();
+
+            lab1.Content = dice1.Hodit.ToString();
+            lab2.Content = dice2.Hodit.ToString();
+            lab3.Content = dice3.Hodit.ToString();
+            lab4.Content = dice4.Hodit.ToString();
+            lab5.Content = dice5.Hodit.ToString();
+            lab6.Content = dice6.Hodit.ToString();
+        }
+    }
 }
