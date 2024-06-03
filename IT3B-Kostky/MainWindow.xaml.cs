@@ -36,6 +36,13 @@ namespace IT3B_Kostky
             lab4.Content = dice4.Hodit.ToString();
             lab5.Content = dice5.Hodit.ToString();
             lab6.Content = dice6.Hodit.ToString();
+
+            for (int i = 0; i < 7; i++)
+            { 
+                Dice dice = new Dice();
+
+                
+            }
         }
     }
 }
