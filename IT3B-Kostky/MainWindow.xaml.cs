@@ -23,6 +23,7 @@ namespace IT3B_Kostky
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             Dice dice1 = new Dice();
             Dice dice2 = new Dice();
             Dice dice3 = new Dice();
@@ -30,109 +31,105 @@ namespace IT3B_Kostky
             Dice dice5 = new Dice();
             Dice dice6 = new Dice();
 
+            int m = 0;
 
-            for (int i = 1; i <= 3; i++)
-            { 
-                for (int j = 1; j <= 3; j++)
-                {
-                    Rectangle r = new Rectangle();
+            Dice[] dices = { dice1, dice2, dice3, dice4, dice5, dice6 };
 
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
-
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can1.Children.Add(r);
-                }
-            }
-            for (int i = 1; i <= 3; i++)
+            Canvas[] cans = { can1, can2, can3, can4, can5, can6 };
+             
+            foreach(Canvas c in cans ) 
             {
-                for (int j = 1; j <= 3; j++)
+               // MessageBox.Show(dices[m].Hodit.ToString());
+                c.Children.Clear();
+
+                for (int i = 0; i <= 2; i++)
                 {
-                    Rectangle r = new Rectangle();
+                    for (int j = 0; j <= 2; j++)
+                    {
+                        Ellipse r = new Ellipse();
 
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
+                        r.Width = can1.ActualWidth / 3;
+                        r.Height = can1.ActualHeight / 3;
 
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can2.Children.Add(r);
+                        
+                        switch (dices[m].Hodit)
+                        {
+                            case 1:
+                                if (j ==1  && i==1)
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                break;
+                            case 2:
+                                if ((j == 0 && i == 0) || (j == 2 && i == 2))
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                break;
+                            case 3:
+                                if (i == j)
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                break;
+                            case 4:
+                                if ((i == 0 || i == 3 - 1) && (j == 0 || j == 3 - 1))
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                break;
+                            case 5:
+                                if ((i == j) || (Math.Abs(i - j)== 2))
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                break;
+                            case 6:
+                                if (j == 0 || j == 2)
+                                {
+                                    r.Fill = Brushes.Black;
+                                    r.Stroke = Brushes.Wheat;
+                                }
+                                else
+                                {
+                                    r.Fill = Brushes.Wheat;
+                                }
+                                r.StrokeThickness = 1;
+                                break;
+                        }
+                        Canvas.SetLeft(r, r.Width * j);
+                        Canvas.SetTop(r, r.Height * i);
+                        c.Children.Add(r);
+                    }
                 }
+                m++;
             }
-            for (int i = 1; i <= 3; i++)
-            {
-                for (int j = 1; j <= 3; j++)
-                {
-                    Rectangle r = new Rectangle();
 
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
-
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can3.Children.Add(r);
-                }
-            }
-            for (int i = 1; i <= 3; i++)
-            {
-                for (int j = 1; j <= 3; j++)
-                {
-                    Rectangle r = new Rectangle();
-
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
-
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can4.Children.Add(r);
-                }
-            }
-            for (int i = 1; i <= 3; i++)
-            {
-                for (int j = 1; j <= 3; j++)
-                {
-                    Rectangle r = new Rectangle();
-
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
-
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can5.Children.Add(r);
-                }
-            }
-            for (int i = 1; i <= 3; i++)
-            {
-                for (int j = 1; j <= 3; j++)
-                {
-                    Rectangle r = new Rectangle();
-
-                    r.Width = can1.ActualWidth / 9;
-                    r.Height = can1.ActualHeight / 9;
-                    r.Fill = Brushes.Aqua;
-                    r.Stroke = Brushes.Black;
-                    r.StrokeThickness = 1;
-
-                    Canvas.SetLeft(r, r.Width * j);
-                    Canvas.SetTop(r, r.Height * i);
-                    can6.Children.Add(r);
-                }
-            }
         }
     }
 }
