@@ -39,7 +39,7 @@ namespace IT3B_Kostky
              
             foreach(Canvas c in cans ) 
             {
-               // MessageBox.Show(dices[m].Hodit.ToString());
+                //MessageBox.Show(dices[m].Hodit.ToString());
                 c.Children.Clear();
 
                 for (int i = 0; i <= 2; i++)
@@ -129,6 +129,15 @@ namespace IT3B_Kostky
                 }
                 m++;
             }
+            string text = "";
+            foreach (Dice dice in dices)
+            {
+
+
+                text += "Šťastná ruka toho kluka: " + dice.Hodit.ToString() +"\n";
+            }
+
+            MessageBox.Show(text);
 
         }
     }
